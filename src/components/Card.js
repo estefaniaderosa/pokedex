@@ -26,7 +26,7 @@ const Card = () => {
                     setAbility(response.data.abilities[0].ability.name);
                     setErr('')
                 }
-                ).catch(() => setErr('ta mal'));
+                ).catch(() => setErr('Pokemon not found'));
             })(query);
         }), [query])
 
@@ -70,6 +70,7 @@ const Card = () => {
 
             </div>
         </div>
+        
     );
 
 }
